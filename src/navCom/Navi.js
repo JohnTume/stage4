@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import {Navbar, Nav} from 'react-bootstrap'
-
+// import 'navistyle.css'
 export default class Navi extends Component{
     render() {
         console.log("Hey");

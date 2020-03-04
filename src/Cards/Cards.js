@@ -4,7 +4,7 @@ import img1 from '../assets/index.jpg';
 import StackGrid from "react-stack-grid";
 import sizeMe from 'react-sizeme';
 import Data from './warningpic.js';
-
+// import './card-style.css'
 class Cards extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +27,9 @@ class Cards extends Component {
         ["i12.jpg", "Humor and even teasing can be a fundamental mode of interacting within many long-term relationships. The key aspect is whether it feels comfortable and loving to both parties. In many controlling relationships, emotional abuse can be thinly veiled as \"I was just playing with you; you shouldn't take it personally.\" ", "Teasing or Ridicule That Has an Uncomfortable Undercurrent"],
         ["i13.png", "You may notice that you are constantly interrupted, or that opinions you express are quickly dismissed or were never acknowledged in the first place. Perhaps the conversation is always so overwhelmingly dominated by your partner that you can't remember the last time they asked you a meaningful question about how you were doing and actually listened to the answer.", "Inability or unwillingness to ever hear your point of view"],
         ["i14.png", "Even if a manipulative person is in the wrong, they will never want to show it. They will normally do what they can to make it seem like they are right and rationalize their behavior. This way, no matter what arguments you give back to them, they will always be right and will always rationalize their behavior to themselves.", " They Will Never Accept The Blame"],
-        ["i15.png", "If a manipulator is out of arguments, they might try to provoke you as a last resort. They might say things that would make a normal person question a manipulator’s sanity or do anything to trigger negative emotions and make you angry. The purpose of this is to involve you in a pointless quarrel and make you say something that the manipulator can use in their defense. Tell them that what they’re saying makes no sense — you’re guaranteed to see a tragedy no worse than a Shakespeare play. If you spot this behavior, it’s essential that you stay calm and don’t give in to provocations. Just try to bring the conversation back to the topic. But if your partner goes on behaving this way, it’s better to end the conversation politely.", "They provoke"]
+        ["i15.png", "If a manipulator is out of arguments, they might try to provoke you as a last resort. They might say things that would make a normal person question a manipulator’s sanity or do anything to trigger negative emotions and make you angry. The purpose of this is to involve you in a pointless quarrel and make you say something that the manipulator can use in their defense. Tell them that what they’re saying makes no sense — you’re guaranteed to see a tragedy no worse than a Shakespeare play. If you spot this behavior, it’s essential that you stay calm and don’t give in to provocations. Just try to bring the conversation back to the topic. But if your partner goes on behaving this way, it’s better to end the conversation politely.", "They provoke"],
+        // ["", "Some individuals enjoy “intellectual bullying” by presuming to be the expert and most knowledgeable in certain areas. They take advantage of you by imposing alleged facts, statistics, and other data you may know little about. This can happen in sales and financial situations, in professional discussions and negotiations, as well as in social and relational arguments.", "Overwhelm You with Facts and Statistics"],
+        // ["", "Some individuals raise their voice during discussions as a form of aggressive manipulation. The assumption may be that if they project their voice loudly enough, or display negative emotions, you’ll submit to their coercion and give them what they want.  The aggressive voice is frequently combined with strong body language such as standing or excited gestures to increase impact.", "Raising Their Voice and Displaying Negative Emotions"]
        ]
        
 
@@ -50,7 +52,7 @@ class Cards extends Component {
         } = this.props;
 
         return(
-            <div>
+            <div className="container">
             <h1 className = 'home_header'>Signs of Manipulation</h1>
             <StackGrid columnWidth={width <= 500 ? '50%' : '33.33%'}  gutterWidth={6.5} gutterHeight={width <= 500 ? 6:10}>
                 {this.create()}

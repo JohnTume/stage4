@@ -22,7 +22,7 @@ export class App extends React.Component {
         return (        
             <BrowserRouter>
                    {/* this Navi is not working */}
-                    <Navi className = 'navbar'></Navi>
+                <Navi className = 'navbar'></Navi>
                 <div className="container">
                     <Switch>
                     <Route exact path='/' component={Cards} />
