@@ -10,8 +10,7 @@ class CommentBox extends Component {
     // Prevent the default behaviour of form submit
     e.preventDefault();
 
-    // Get the value of the comment box
-    // and make sure it not some empty strings
+    // Get the value of the comment boxand =make sure it not some empty strings
     const comment = e.target.elements.comment.value.trim();
     const name = e.target.elements.name.value.trim();
 

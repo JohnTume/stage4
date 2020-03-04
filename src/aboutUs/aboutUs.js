@@ -5,7 +5,7 @@ import './style.css';
 export default class aboutProject extends React.Component {
     render() {
         return (
-            <div className="content">
+            <div className="content-about-us">
                 <h1 className="about-h1">About US <img src={require('../assets/aboutUS.png')} alt="Cute Snoopy" className='Snoopy'/></h1>
                 <p id='P1'>
                     The idea of manipulation is often portrayed as something extreme on the 

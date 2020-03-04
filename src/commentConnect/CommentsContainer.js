@@ -7,8 +7,9 @@ class CommentsContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.handleAddComment = this.handleAddComment.bind(this);
+    this.handleAddComment = this.handleComments.bind(this);
     this.state = {
+      loading: false,
       comments: []
     }
   }
@@ -16,8 +17,13 @@ class CommentsContainer extends Component {
   componentDidMount() {
     /* global Ably */
     const channel = Ably.channels.get('comments');
+    
    
     channel.attach();
+    setTimeout(() => { 
+      this.setState({loading: true})
+    },  this.setState({loading: false}));
+
       channel.once('attached', () => {
         channel.history((err, page) => {
           /* create a new array with comments */
@@ -28,13 +34,13 @@ class CommentsContainer extends Component {
           /* subscribe to new comments */
           channel.subscribe((msg, err) => {
             const commentObject = msg['data'];
-            this.handleAddComment(commentObject);
+            this.handleComments(commentObject);
           });
         });
       });
   }
 
-  handleAddComment(comment) {
+  handleComments(comment) {
     this.setState(prevState => {
       return {
         comments: [comment].concat(prevState.comments)
@@ -43,19 +49,18 @@ class CommentsContainer extends Component {
   }
 
   render() {
-    return (
-      <section className="section">
+    // this.state.loading === true ? <Spinner animation="grow" variant="info" /> : 
+      return (<section className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-half is-offset-one-quarter">
             <img className='graphics' src={require('./iconAsset/connect_graphic.svg')} alt="icon for user" />
-              <CommentBox className='comment_form'handleAddComment={this.handleAddComment} />
+              <CommentBox className='comment_form'handleAddComment={this.handleComments} />
               <Comments comments={this.state.comments} />
             </div>
           </div>
         </div>
-      </section>
-    );
+      </section>)
   }
 }
 export default CommentsContainer;

@@ -14,7 +14,7 @@ class Comment extends Component {
       <article className="media">
         <figure className="media-left">
           <p className="image is-64x64">
-            <img src={require('./iconAsset/i' + this.generateNum() + '.jpg')} style={divStyle} alt="icon for user" />
+            <img src={require('./iconAsset/i' + this.generateNum() + '.jpg')} style={divStyle} alt="snoopy user icon" />
           </p>
         </figure>
         <div className="media-content">
