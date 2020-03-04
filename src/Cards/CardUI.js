@@ -3,6 +3,7 @@ import img1 from '../assets/index.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './card-style.css'
 
+
 const Card = props => {
     
     return (
@@ -15,7 +16,7 @@ const Card = props => {
                 <p className="text-left">
                     {props.comment}
                 </p>
-                <a href="#" className="btn btn-outline-success">Go Anywhere</a>
+                {/* <a href="#" className="btn btn-outline-success">Go Anywhere</a> */}
             </div>  
         </div>
     );

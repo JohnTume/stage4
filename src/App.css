@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|Oswald|PT+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Abel|Dosis|Inconsolata&display=swap');
 
 .centered {
   height: 100vh; /* Magic here */
@@ -10,4 +10,12 @@
 
 .navbar {
   width: 100% !important;
+}
+
+.card-text {
+  font-size: 0.5rem;
+  padding: 0.2rem  0.2rem;
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Abel', sans-serif;
 }
