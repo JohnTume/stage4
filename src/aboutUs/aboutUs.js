@@ -5,19 +5,22 @@ import './style.css';
 export default class aboutProject extends React.Component {
     render() {
         return (
-            <div>
+            <div className="content">
+                <h1 className="about-h1">About US <img src={require('../assets/aboutUS.png')} alt="Cute Snoopy" className='Snoopy'/></h1>
                 <p id='P1'>
                     The idea of manipulation is often portrayed as something extreme on the 
-                    <a
-                        href="http://www.seethetriumph.org/blog/the-media-and-stereotypes-about-abusive-relationships"
-                        class="media"> media</a>.
+                    <span>
+                    <a href="http://www.seethetriumph.org/blog/the-media-and-stereotypes-about-abusive-relationships" class="media"> media</a>
+                    </span>.
                     It challenges victims even to realize that they are involved in a manipulative
                     form of relationship. Regardless of one's gender, sexual orientation, and
                     ethnicity, everyone can be a victim of a
+                    <span>
                     <a
                         href="https://psychologia.co/emotional-manipulation/"
                         class="media"
                         id="word"> manipulative relationship</a>.
+                    </span>
                 </p>
 
                 <p id='P2'>
