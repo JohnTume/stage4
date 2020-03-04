@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Oswald|PT+Sans&display=swap');
+
+
+.centered {
+  height: 100vh; /* Magic here */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100% !important;
+}

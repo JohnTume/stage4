@@ -1,0 +1,18 @@
+img {
+    padding:1px;
+    /* border:1px solid #021a40; */
+}
+
+.comment {
+    color:red;
+}
+
+.graphics {
+    position: absolute;
+}
+
+.comment_form {
+    position: relative;
+    margin-right: 20em !important;
+    display: block;
+}
